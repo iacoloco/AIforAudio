@@ -31,7 +31,8 @@ Xm = np.abs(X)
 N = Xm[:,320:400]  # N represents a short segment in time — about 80 frames wide —
                       #but still includes all frequencies."
 
-average = np.mean(N,1)
+average = np.mean(N,1)   #Average noise per frequency 1= frequency access
+
 k=0.08
 average = k * average
 

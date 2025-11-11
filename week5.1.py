@@ -32,15 +32,6 @@ plt.plot(mix[1000:1020]), "r"
 
 
 
-
-
-
-
-
-#hissInverted = dataHiss * (-1)
-
-#noiseC = dataMix + hissInverted
-
-sd.play(mix, samplerate)
+sd.play(estimate, samplerate)
 sd.wait()
 
