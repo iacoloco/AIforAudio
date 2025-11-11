@@ -32,20 +32,18 @@ N = Xm[:,320:400]  # N represents a short segment in time — about 80 frames wi
                       #but still includes all frequencies."
 
 average = np.mean(N,1)
-average = average[None ,:]
-Em = Xm - average
+k=0.08
+average = k * average
+
+Em = Xm - average[:,None]
+
+Xest = Em * np.exp(1j*Xa)
 
 
 
 
+inverse = lr.istft(Xest, hop_length=512)  #back to time-domain audio
+inverse = inverse.astype(np.float32)       
+sd.play(inverse, sr)
+sd.wait()
 
-
-
-# = lr.stft(x)
-
-#Xm = 
-
-#aveg = np.mean(N,1)
-
-
-#estimateMagnetude = Xm - avg
