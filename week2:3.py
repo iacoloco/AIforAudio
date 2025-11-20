@@ -22,7 +22,7 @@ print("converted data type: " , data.dtype)
 print(data)
 
 "normalisation" 
-data = data / np.max(data)
+data = data / np.max(np.abs(data))
 t = np.arange(len(data)) / samplerate
 print(len(data))
 

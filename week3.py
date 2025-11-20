@@ -21,7 +21,7 @@ samplerate , data = wavfile.read("piano_chord_mono.wav")
 data = data.astype(np.float32)
 data = data / np.max(np.abs(data))
 
-sd.play(data , samplerate)
+#sd.play(data , samplerate)
 sd.wait()
 
 print(samplerate)
